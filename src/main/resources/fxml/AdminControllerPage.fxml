@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="globalPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tertir.tertiram.controller.AdminController">
+   <top>
+      <MenuBar style="-fx-background-color: #B8D3F8;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Qr կոդեր">
+            <items>
+              <MenuItem fx:id="generateMenuItem" mnemonicParsing="false" text="Գեներացնել" />
+                  <MenuItem fx:id="scannedCountMenuItem" mnemonicParsing="false" text="Սկանավորված կոդերի քանակ" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Աղյուսակ">
+            <items>
+              <MenuItem fx:id="refresh" mnemonicParsing="false" text="Թարմացնել" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Կարգավորումներ">
+               <items>
+                  <MenuItem fx:id="changePassword" mnemonicParsing="false" text="Փոխել գաղտնաբառը" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" text="Ելք" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="userTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="93.14850127696991" text="ID" />
+          <TableColumn fx:id="username" prefWidth="125.46533203125" text="Մուտքանուն" />
+            <TableColumn fx:id="idram" prefWidth="142.57427978515625" text="Idram" />
+            <TableColumn fx:id="otherBank" prefWidth="142.57427978515625" text="Այլ բանկ" />
+            <TableColumn fx:id="randomCode" prefWidth="142.57427978515625" text="Կոդ" />
+            <TableColumn fx:id="fifth" prefWidth="142.57427978515625" text="5" />
+            <TableColumn fx:id="fourth" prefWidth="142.57427978515625" text="4" />
+            <TableColumn fx:id="third" prefWidth="142.57427978515625" text="3" />
+            <TableColumn fx:id="second" prefWidth="142.57427978515625" text="2" />
+            <TableColumn fx:id="first" prefWidth="142.57427978515625" text="1" />
+            <TableColumn fx:id="sum" prefWidth="142.57427978515625" text="Գումար" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="41.0" prefWidth="989.0" BorderPane.alignment="CENTER">
+        <buttons>
+            <Button fx:id="purchaseUser" mnemonicParsing="false" stylesheets="@../css/controllerButtons.css" text="Վճարել" textFill="WHITE" />
+        </buttons>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </ButtonBar>
+   </bottom>
+</BorderPane>
